@@ -1,0 +1,11 @@
+@SpringBootApplication -- We need to provide this on top of the class-- This is just main method class 
+SpringApplication.run(ServiceApp.class, args); -- Needs to write in the main method-- 1st argument is current class
+
+@RestController -- This is service class -- we need to provide this on top of the service class
+@RequestMapping(value = "/heartBeat", method = RequestMethod.GET)  --  This is on top of the method which resolves request mapping
+ public ResponseEntity<String> heartBeat(){
+        return new ResponseEntity<String>("TEST123", HttpStatus.OK);
+    }
+
+
+
